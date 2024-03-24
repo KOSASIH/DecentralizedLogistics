@@ -1,0 +1,33 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract Node {
+    string public id;
+    string public name;
+    string public location;
+    string public status;
+    uint256 public createdAt;
+
+    constructor(string memory _name, string memory _location) {
+        id = sha256(_name + _location + block.timestamp);
+        name = _name;
+        location = _location;
+        status = "active";
+        createdAt = block.timestamp;
+    }
+
+    function updateStatus(string memory _newStatus) public {
+        require(msg.sender == owner, "Only the owner can update the status");
+        status = _newStatus;
+    }
+
+    function updateLocation(string memory _newLocation) public {
+        require(msg.sender == owner, "Only the owner can update the location");
+        location = _newLocation;
+    }
+
+    function transferOwnership(string memory _newOwner) public {
+        require(msg.sender == owner, "Only the owner can transfer ownership");
+        owner = _newOwner;
+    }
+}
