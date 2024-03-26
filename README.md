@@ -1,3 +1,6 @@
+![Static Badge](https://img.shields.io/badge/High-Tech-green)
+
+
 # DecentralizedLogistics
 DecentralizedLogistics is a blockchain-powered platform seeking to enhance logistics and supply chain management by offering a secure, transparent, and tamper-proof network for exchanging real-time location data and shipment details. The system facilitates efficient and reliable transactions, empowering businesses and customers to monitor their goods and services, reducing the risk of revenue loss, and increasing overall satisfaction.
 
